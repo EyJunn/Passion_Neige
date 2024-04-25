@@ -1,3 +1,5 @@
+const validator = require("validator");
+
 const middleEmail = (req, res, next) => {
   const email = req.body.email;
   if (!validator.isEmail(email)) {
@@ -16,4 +18,4 @@ const middleURL = (req, res, next) => {
   next();
 };
 
-module.exports= { middleEmail, middleURL}
+module.exports = { middleEmail, middleURL };
