@@ -89,7 +89,7 @@ const loginUser = async (req, res) => {
             process.env.MY_SECRET_KEY,
             { expiresIn: "20d" }
           );
-          res.status(200).json({ jwt: token });
+          res.status(200).json({ jwt: token, role: result[0].role });
           return;
         }
       );
