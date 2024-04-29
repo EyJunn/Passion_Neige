@@ -5,7 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login page</title>
   </head>
-  <body></body>
+  <body>
+    <!-- component -->
+    <div class="relative flex h-full w-full">
+      <div class="h-screen w-1/2 bg-black">
+        <div
+          class="mx-auto flex h-full w-2/3 flex-col justify-center text-white xl:w-1/2"
+        >
+          <div>
+            <p class="text-2xl">Login|</p>
+            <p>please login to continue|</p>
+          </div>
+
+          <div class="mt-10">
+            <form>
+              <div>
+                <label class="mb-2.5 block font-extrabold" for="email"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="inline-block w-full rounded-full bg-white p-2.5 leading-none text-black placeholder-indigo-900 shadow placeholder:opacity-30"
+                  placeholder="mail@user.com"
+                />
+              </div>
+              <div class="mt-4">
+                <label class="mb-2.5 block font-extrabold" for="email"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  id="email"
+                  class="inline-block w-full rounded-full bg-white p-2.5 leading-none text-black placeholder-indigo-900 shadow"
+                />
+              </div>
+              <div
+                class="mt-4 flex w-full flex-col justify-between sm:flex-row"
+              >
+                <!-- Remember me -->
+                <div>
+                  <input type="checkbox" id="remember" /><label
+                    for="remember"
+                    class="mx-2 text-sm"
+                    >Remember me</label
+                  >
+                </div>
+                <!-- Forgot password -->
+                <div>
+                  <a href="#" class="text-sm hover:text-gray-200"
+                    >Forgot password</a
+                  >
+                </div>
+              </div>
+              <div class="my-10">
+                <button
+                  class="w-full rounded-full bg-orange-600 p-5 hover:bg-orange-800"
+                >
+                  Login
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="h-screen bg-blue-600">
+        <img
+          src="https://images.unsplash.com/photo-1515268064940-5150b7c29f35?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          class="h-full w-full"
+        />
+      </div>
+    </div>
+  </body>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="../../Javascript/Auth/Auth.js"></script>
 </html>
