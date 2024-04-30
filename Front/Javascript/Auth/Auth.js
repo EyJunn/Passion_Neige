@@ -27,16 +27,16 @@ async function HandleLogin() {
 }
 
 async function HandleRegister() {
-  let firstName = document.querySelector("#firstName").value;
-  let lastName = document.querySelector("#lastName").value;
-  let email = document.querySelector("#mail").value;
-  let password = document.querySelector("#Password").value;
+  let firstName = document.querySelector(".first_name").value;
+  let lastName = document.querySelector(".last_name").value;
+  let email = document.querySelector(".mail").value;
+  let password = document.querySelector(".Password").value;
 
   let user = {
+    first_name: firstName,
+    last_name: lastName,
     email: email,
     password: password,
-    firstName: firstName,
-    lastName: lastName,
   };
 
   let request = {

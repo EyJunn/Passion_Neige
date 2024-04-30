@@ -5,19 +5,19 @@ const { pool } = require("../Services/DBConnection");
 
 const register = async (req, res) => {
   if (
-    !req.body.email ||
-    !req.body.password ||
     !req.body.first_name ||
-    !req.body.last_name
+    !req.body.last_name ||
+    !req.body.email ||
+    !req.body.password
   ) {
     res.status(400).json({ error: "Missing fields" });
     return;
   }
 
-  let email = req.body.email;
-  let password = req.body.password;
   let first_name = req.body.first_name;
   let last_name = req.body.last_name;
+  let email = req.body.email;
+  let password = req.body.password;
 
   try {
     const values = [email];
@@ -39,7 +39,7 @@ const register = async (req, res) => {
       const [rows] = await pool.execute(sqlInsertRequest, insertVALUES);
 
       if (rows.affectedRows > 0) {
-        res.status(201).json({ success: "registration successful" });
+        res.status(200).json({ success: "registration successful" });
         return;
       } else {
         res.status(500).json({ error: "registration failed" });
