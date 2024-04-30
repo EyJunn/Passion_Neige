@@ -60,13 +60,23 @@ const addEquipment = async (req, res) => {
 };
 
 const getAllEquipment = async (req, res) => {
-  try {
-    const [rows, fields] = await pool.query("SELECT * FROM equipment");
-    res.status(200).json(rows);
-  } catch (error) {
-    console.log(error.stack);
-    res.status(500).json({ error: "Server error" });
-  }
+  const token = await extractToken(req);
+
+  jwt.verify(token, process.env.MY_SECRET_KEY, async (err, authData) => {
+    if (err) {
+      console.log(err);
+      res.status(401).json({ err: "Unauthorized" });
+      return;
+    } else {
+      try {
+        const [rows, fields] = await pool.query("SELECT * FROM equipment");
+        res.status(200).json({ rows: rows, role: authData.role });
+      } catch (error) {
+        console.log(error.stack);
+        res.status(500).json({ error: "Server error" });
+      }
+    }
+  });
 };
 
 const updateEquipment = async (req, res) => {

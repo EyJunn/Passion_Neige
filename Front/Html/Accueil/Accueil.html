@@ -5,9 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Passion Neige</title>
   </head>
-  <body>
-    <div id="cards"></div>
+  <body
+    class="bg-[url('https://images5.alphacoders.com/960/960917.jpg')] bg-cover backdrop-blur-sm"
+  >
+    <header
+      class="flex justify-between w-full p-5 bg-white text-center bg-opacity-60 sticky top-0"
+    >
+      <h1 class="text-4xl title">Passion Neige</h1>
+      <button
+        id="LogOut"
+        class="w-auto rounded-full bg-cyan-500 p-2 hover:bg-opacity-40"
+      >
+        LogOut
+      </button>
+    </header>
+    <div id="cards" class="flex flex-wrap justify-center"></div>
+
+    <footer class="w-full p-5 bg-white bg-opacity-80">
+      <ol class="flex justify-evenly fox">
+        <li>About us</li>
+        <li>Contact</li>
+        <li>WHAT THE FOX SAY</li>
+      </ol>
+    </footer>
   </body>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+    .card {
+      box-shadow: 15px 0 10px rgba(0, 0, 0, 0.356);
+      font-family: "Anek Devanagari", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: bold;
+      font-style: normal;
+      font-variation-settings: "wdth" 100;
+    }
+    .title {
+      color: white;
+      font-family: "Titillium Web", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      filter: drop-shadow(0 2px 2px #000000);
+    }
+
+    .fox {
+      color: black;
+      font-family: "Titillium Web", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      filter: drop-shadow(0 2px 2px #6ad1e1);
+    }
+  </style>
   <script src="../../Javascript/Accueil/Accueil.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
 </html>

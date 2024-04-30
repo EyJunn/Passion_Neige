@@ -10,19 +10,22 @@ async function HandleLogin() {
   let request = {
     method: "POST",
     headers: {
-      "Content-type": "application/json; charset=utf-8",
+      "Content-Type": "application/json; charset=utf-8",
     },
     body: JSON.stringify(user),
   };
 
   let apiRequest = fetch("http://localhost:3005/user/login", request);
   let response = await apiRequest;
+  let data = await response.json();
   if (response.status === 200) {
-    window.localStorage.setItem("jwt", "jwt");
+    let jwt = data.jwt;
+    let role = data.role;
+    window.localStorage.setItem("jwt", jwt);
 
-    setTimeout(() => {
-      window.location.href = "../../Html/Accueil/Accueil.html";
-    }, 1000);
+    window.location.href = "../../Html/Accueil/Accueil.html";
+  } else {
+    alert("Wrong Id");
   }
 }
 

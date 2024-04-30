@@ -83,8 +83,7 @@ const loginUser = async (req, res) => {
             {
               email: result[0].email,
               id: result[0].id,
-              first_name: result[0].first_name,
-              last_name: result[0].last_name,
+              role: result[0].role,
             },
             process.env.MY_SECRET_KEY,
             { expiresIn: "20d" }
