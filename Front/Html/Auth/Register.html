@@ -6,11 +6,6 @@
     <title>Register page</title>
   </head>
   <body>
-    <!-- component -->
-    <link
-      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
     <div
       class="relative min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 bg-gray-500 bg-no-repeat bg-cover relative items-center"
       style="
@@ -25,8 +20,7 @@
         </div>
         <div class="flex flex-row justify-center items-center space-x-3"></div>
         <div class="flex items-center justify-center space-x-2"></div>
-        <form class="mt-8 space-y-6" action="#" method="POST">
-          <input type="hidden" name="remember" value="true" />
+        <div class="mt-8 space-y-6">
           <div class="relative">
             <div class="absolute right-0 mt-4"></div>
             <label class="text-sm font-bold text-gray-700 tracking-wide"
@@ -34,6 +28,7 @@
             >
             <input
               class="w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500"
+              id="firstName"
               type="text"
               placeholder="Fleur"
             />
@@ -45,6 +40,7 @@
             >
             <input
               class="w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500"
+              id="lastName"
               type="text"
               placeholder="Delacour"
             />
@@ -56,6 +52,7 @@
             >
             <input
               class="w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500"
+              id="mail"
               type="email"
               placeholder="mail@gmail.com"
             />
@@ -66,7 +63,8 @@
             </label>
             <input
               class="w-full content-center text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500"
-              type=""
+              id="Password"
+              type="password"
               placeholder="Enter your password"
             />
           </div>
@@ -92,7 +90,7 @@
               Log to your account
             </a>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   </body>
