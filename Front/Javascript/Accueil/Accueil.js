@@ -35,10 +35,15 @@ async function getAllEquipment() {
       equipment.equipment_size
     } ans</p> <p>${equipment.equipment_stock}</p>${
       response.role === "admin"
-        ? `<a class="mx-1 modifier ">Modifier</a><button class="mx-1 delete  ">Supprimer</button>`
+        ? `<button onclick="Modifier('${equipment.equipment_id}')" class="mx-1 modifier ">Modifier</button><button class="mx-1 delete  ">Supprimer</button>`
         : ""
     }</div></div> `;
   });
 }
 
 getAllEquipment();
+
+function Modifier(id) {
+  localStorage.setItem("id", id);
+  window.location.href = "../../Html/Equipment/Update.html";
+}

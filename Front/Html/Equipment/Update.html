@@ -5,7 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Update page</title>
   </head>
-  <body></body>
+<body class="bg-[url('https://c4.wallpaperflare.com/wallpaper/635/396/973/winter-mountain-range-mountainous-landforms-snow-wallpaper-preview.jpg')] bg-cover backdrop-blur-sm h-auto bg-center ">
+    <header
+      class="flex justify-between w-full p-5 bg-white text-center bg-opacity-60 sticky top-0 "
+    >
+      <a href="../Accueil/Accueil.html" class="text-4xl title">Passion Neige</a>
+      <button
+        id="Logout"
+        class="w-auto rounded-full bg-cyan-500 p-2 hover:bg-opacity-40"
+      >
+        LogOut
+      </button>
+    </header>
+ <main>
+        <div class="w-full h-screen flex justify-center items-center">
+       <div class="bg-white shadow-md rounded px-8 pt-6 pb-2 w-fit ">
+      
+     <div class="mb-6">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+       Nom de l'article
+        </label>
+       
+        <input class="shadow appearance-none border  rounded w-48 py-2 px-3 text-gray-700 mb-3  leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Nom de l'article">
+        <div>
+           <label class="block text-gray-700 text-sm font-bold mb-2" for="Description">
+       Description
+        </label>
+         <input class="shadow appearance-none border  rounded w-48 py-2 px-3 text-gray-700 mb-3  leading-tight focus:outline-none focus:shadow-outline" id="Description" type="text" placeholder="Description de l'article">
+         </div>
+         <div>
+           <label class="block text-gray-700 text-sm font-bold mb-2" for="Age">
+       Age
+        </label>
+          <input class="shadow appearance-none border  rounded w-48 py-2 px-3 text-gray-700 mb-3  leading-tight focus:outline-none focus:shadow-outline" id="Age" type="number">
+          </div>
+          <div>
+             <label class="block text-gray-700 text-sm font-bold mb-2" for="Stock">
+       Stock
+        </label>
+           <input class="shadow appearance-none border  rounded w-48 py-2 px-3 text-gray-700 mb-3  leading-tight focus:outline-none focus:shadow-outline" id="Stock" type="number">
+           </div>
+     </div>
+     <div class="flex items-center justify-between">
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded     focus:outline-none focus:shadow-outline" onclick="EndEditEvent()" type="button">
+          Modifier
+       </button>
+      
+      </div>
+   </div>
+  </div>
+  </main>
+  <footer class="w-full p-5 bg-white bg-opacity-80">
+      <ol class="flex justify-evenly fox">
+        <li>About us</li>
+        <li>Contact</li>
+        <li>
+          <a
+            href="https://youtu.be/YNOYlX7a2NQ?si=-d4gellXsA77TFM1"
+            target="_blank"
+            >WHAT THE FOX SAY</a
+          >
+        </li>
+      </ol>
+    </footer>
+</body>
+ <style> 
+@import url("https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+
+
+    .title {
+      color: white;
+      font-family: "Titillium Web", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      filter: drop-shadow(0 2px 2px #000000);
+    }
+
+
+    .fox {
+      color: black;
+      font-family: "Titillium Web", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      filter: drop-shadow(0 2px 2px #6ad1e1);
+    }
+ </style>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="../../Javascript/Equipment/Equipment.js""></script>
+  <script src="../../Javascript/Equipment/UpdateEquipment.js""></script>
 </html>
+

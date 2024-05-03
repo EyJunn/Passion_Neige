@@ -44,7 +44,7 @@ const addEquipment = async (req, res) => {
         const [rows] = await pool.execute(sqlInsertEquipment, valuesEquipment);
 
         if (rows.affectedRows > 0) {
-          res.status(201).json({ success: "registration successful" });
+          res.status(200).json({ success: "registration successful" });
           return;
         } else {
           res.status(500).json({ error: "registration failed." });
@@ -122,7 +122,7 @@ const updateEquipment = async (req, res) => {
         data.join(",");
         const sql = `UPDATE equipment SET ${data} WHERE equipment_id=? `;
         const [result] = await pool.execute(sql, values);
-        res.json(result);
+        res.status(200).json(result);
       }
     }
   });

@@ -9,9 +9,16 @@
     class="bg-[url('https://images5.alphacoders.com/960/960917.jpg')] bg-cover backdrop-blur-sm"
   >
     <header
-      class="flex justify-between w-full p-5 bg-white text-center bg-opacity-60 sticky top-0"
+      class="flex justify-between w-full p-5 bg-white text-center bg-opacity-60 sticky top-0 backdrop-blur-sm relative"
     >
       <h1 class="text-4xl title">Passion Neige</h1>
+      <a
+        id="Create"
+        href="../Equipment/Creation.html"
+        class="w-auto rounded-full bg-cyan-500 p-2 hover:bg-opacity-40 absolute right-24 hover:cursor-pointer"
+      >
+        Create
+      </a>
       <button
         id="LogOut"
         class="w-auto rounded-full bg-cyan-500 p-2 hover:bg-opacity-40"
@@ -19,13 +26,20 @@
         LogOut
       </button>
     </header>
+
     <div id="cards" class="flex flex-wrap justify-center"></div>
 
     <footer class="w-full p-5 bg-white bg-opacity-80">
       <ol class="flex justify-evenly fox">
         <li>About us</li>
         <li>Contact</li>
-        <li>WHAT THE FOX SAY</li>
+        <li>
+          <a
+            href="https://youtu.be/YNOYlX7a2NQ?si=-d4gellXsA77TFM1"
+            target="_blank"
+            >WHAT THE FOX SAY</a
+          >
+        </li>
       </ol>
     </footer>
   </body>
