@@ -35,7 +35,7 @@ async function getAllEquipment() {
       equipment.equipment_size
     } ans</p> <p>${equipment.equipment_stock}</p>${
       response.role === "admin"
-        ? `<button onclick="Modifier('${equipment.equipment_id}')" class="mx-1 modifier ">Modifier</button><button class="mx-1 delete  ">Supprimer</button>`
+        ? `<button onclick="Modifier('${equipment.equipment_id}')" class="mx-1 modifier ${equipment.equipment_id} ">Modifier</button><button class="mx-1 delete" onclick="deleteArticle('${equipment.equipment_id}') ">Supprimer</button>`
         : ""
     }</div></div> `;
   });
@@ -46,4 +46,24 @@ getAllEquipment();
 function Modifier(id) {
   localStorage.setItem("id", id);
   window.location.href = "../../Html/Equipment/Update.html";
+}
+
+async function deleteArticle(id) {
+  let jwt = window.localStorage.getItem("jwt");
+
+  if (!jwt) {
+    console.log("Jwt invalid");
+  }
+
+  let request = {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+      Authorization: `Bearer ${jwt}`,
+    },
+  };
+
+  await fetch(`http://localhost:3005/equipment/deleteEquipment/${id}`, request);
+
+  window.location.reload();
 }
